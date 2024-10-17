@@ -1,0 +1,43 @@
+name: splash_screen
+description: A new Flutter project.
+
+# Prevents the package from being accidentally published to pub.dev.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# Defines the version and build number for your application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+# Dependencies specify other packages that your package needs to work.
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  flutter_native_splash: ^2.4.1 # Add flutter_native_splash dependency
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section.
+  assets:
+    - assets/images/ # Ensure this folder exists
+    # - assets/splash.png # Add your splash image if not already added
+
+  fonts:
+    - family: Kalam
+      fonts:
+        - asset: assets/fonts/Kalam-Light.ttf # Ensure this font exists
+
+flutter_native_splash:
+  color: "#42a5f5" # Background color of the splash screen
+  image: assets/splash.png # Path to the image for the splash screen
+  android: true
+  ios: true
